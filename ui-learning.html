@@ -1,0 +1,69 @@
+<html>
+<title></title>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+
+
+$(document).ready(function(){
+	
+	$("#username").focus(function(){
+		//$(this).css("background-color", "blue");
+		$(this).addClass("focus_on");
+	});
+	
+	$("#username").blur(function(){
+		//$(this).css("background-color", "white");
+		$(this).removeClass("focus_on");
+	});
+	
+	
+	$("#login_btn").click(function() {
+		alert('button is clicked');
+	});
+	
+	
+});
+
+</script>
+
+
+<style type="text/css">
+
+.black {
+height: 100px; 
+}
+
+.focus_on {
+background-color: blue;
+}
+
+.focus_out {
+background-color: white;
+}
+
+
+</style>
+
+</head>
+<body>
+<div id="usernameHolder" class="black">
+<span>UserName:</span><span>
+<input id="username" type="text">
+</span>
+</div>
+
+<div id="passwordHolder" class="black">
+<span>Password:</span>
+<span>
+<input id="pwd" type="password">
+</span>
+</div>
+
+<div id="loginHolder">
+<button id="login_btn">Login</button>
+</div>
+
+</body>
+</html>
